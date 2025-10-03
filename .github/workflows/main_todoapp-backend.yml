@@ -62,8 +62,9 @@ jobs:
         with:
           app-name: 'todoapp-backend'
           slot-name: 'Production'
-          package: .
+          package: ./backend
 
           
+
 
 
