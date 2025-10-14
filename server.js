@@ -217,6 +217,11 @@ app.delete('/api/todos/:id', authenticateToken, async (req, res) => {
   }
 });
 
+// Root msg
+app.get('/', (req, res) => {
+  res.send('Backend ToDo App is running!');
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK' });
@@ -224,4 +229,5 @@ app.get('/api/health', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
 });
