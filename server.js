@@ -11,7 +11,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-producti
 
 // PostgreSQL connection
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Trabajo*2025@localhost:5432/todoapp',
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Trabajo*2025@db-postgres-todoapp.private.postgres.database.azure.com:5432/todoapp',
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 });
 
@@ -231,3 +231,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 
 });
+
